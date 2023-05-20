@@ -1351,3 +1351,25 @@ section {
         transform: rotate(-10deg);
     }
 }
+.reviews{
+    width: 100%;
+    background: rgb(239,243,247);
+}
+.review-cart{
+     padding: 15px;
+     margin: 20px;
+     text-align: center;
+     background: #ffffff;
+     border-radius: 10px;
+ }
+.review-cart:hover{
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+.image-review{
+    width:100%
+}
