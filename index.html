@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Dr Doniyor template project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/contact.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/navbar_style.css">
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" type="text/css" href="styles/navbar_demo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 </head>
 <body>
 
@@ -23,7 +31,7 @@
     <!-- Header -->
 
     <header class="header trans_400">
-        <div class="header_content d-flex flex-row align-items-center ">
+        <div class="header_content d-flex flex-row align-items-center jusity-content-start trans_400">
 
             <!-- Logo -->
             <div class="logo">
@@ -36,34 +44,27 @@
             <!-- Main Navigation -->
             <nav class="main_nav">
                 <ul class="d-flex flex-row align-items-center justify-content-start">
-                    <li class="active"><a href="index.html">Asosiy</a></li>
-                    <li><a href="about.html">Videoblog</a></li>
-                    <li><a href="services.html">Natijalar</a></li>
-                    <li><a href="blog.html">Narxlar</a></li>
-                    <li><a href="contact.html">Aloqa</a></li>
+                    <li><a href="index.html">Asosiy</a></li>
+                    <li><a href="videoblog.html">Xizmatlar</a></li>
+                    <li ><a href="results.html">Natijalar</a></li>
+                    <li><a href="prices.html">Narxlar</a></li>
+                    <li class="active"><a href="contact.html">Aloqa</a></li>
                 </ul>
             </nav>
             <div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
 
-                <!-- Work Hourse -->
-                <div class="work_hours">Du - Shan: 9:00am - 8:00pm</div>
-
                 <!-- Header Phone -->
-                <div class="header_phone">+998 90 122-77-76</div>
+                <div class="header_phone">+998 91 448 75 77</div>
 
                 <!-- Appointment Button -->
-                <div class="button button_1 header_button"><a href="#">Aloqa</a></div>
+                <div class="button button_1 header_button"><a href="https://www.instagram.com/dr_choriyev/?r=nametag">Aloqa</a></div>
 
                 <!-- Header Social -->
                 <div class="social header_social">
                     <ul class="d-flex flex-row align-items-center justify-content-start">
-                        <li><a href="https://www.instagram.com/dr_choriyev/?r=nametag"><i class="fa fa-instagram"
-                                                                                          aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="https://www.youtube.com/channel/UC1KgQ3nypI-tVX-aiqnQqEQ"><i class="fa fa-youtube"
-                                                                                                  aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="https://t.me/Dr_Choriyev"><i class="fa fa-telegram" true></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
 
@@ -86,9 +87,9 @@
         <nav class="menu_nav">
             <ul>
                 <li class="active"><a href="index.html">Asosiy</a></li>
-                <li><a href="about.html">Videoblog</a></li>
-                <li><a href="services.html">Natijalar</a></li>
-                <li><a href="blog.html">Narxlar</a></li>
+                <li><a href="videoblog.html">Videoblog</a></li>
+                <li><a href="results.html">Natijalar</a></li>
+                <li><a href="prices.html">Narxlar</a></li>
                 <li><a href="contact.html">Aloqa</a></li>
             </ul>
         </nav>
@@ -129,7 +130,7 @@
                                         <div class="home_title">CHORIYEV DONIYOR ULUG'BEKOVICH</div>
                                         <br>
                                         <div class="home_buttons d-flex flex-row align-items-center justify-content-center">
-                                            <div class="button button_1"><a href="services.html">Natijalar</a></div>
+                                            <div class="button button_1"><a href="results.html">Natijalar</a></div>
                                             <div class=" custom_direct_line d-flex align-items-center justify-content-start">
                                                 <div class="direct_line_title text-center">Aloqa</div>
                                                 <div class="custom_direct_line_num text-center">
@@ -351,11 +352,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat2.jpg" width="400" height="350" alt="Original Image">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat2.jpg" width="370" height="350" alt="Original Image">
 
                                 <div class="service_title">Qovoqlar plastikasi (Blefaroplartika)</div>
-                            </figure>
+                            </div>
 
                         </div>
                     </div>
@@ -365,11 +366,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat3.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat3.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Quloqlar plastikasi(Otaplatika)</div>
-                            </figure>
+                            </div>
 
                         </div>
                     </div>
@@ -379,11 +380,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat4.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat4.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Burun plastikasi(Rinopasltika)</div>
-                            </figure>
+                            </div>
 
                         </div>
                     </div>
@@ -393,11 +394,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat5.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat5.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Yuz terisi pasltikasi(facelifting)</div>
-                            </figure>
+                            </div>
 
                         </div>
                     </div>
@@ -407,11 +408,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat6.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat6.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Liposaksiya-lipofilling</div>
-                            </figure>
+                            </div>
 
                         </div>
                     </div>
@@ -421,11 +422,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat7.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat7.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Ko'kraklar Plastikasi(mamaplastika)</div>
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -434,11 +435,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center">
                         <div class="service">
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat8.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat8.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Qorin plastikasi(abdominopalastika)</div>
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -448,11 +449,11 @@
                     <div class="service text-center">
                         <div class="service">
 
-                            <figure class="cd-image-container">
-                                <img src="images/xizmat9.jpg" width="400" height="350" alt="пластик хирургия">
+                            <div class="cd-image-container">
+                                <img src="images/xizmat9.jpg" width="370" height="350" alt="пластик хирургия">
 
                                 <div class="service_title">Bisha yog'ini olib tashlash</div>
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -461,11 +462,11 @@
                 <div class="col-xl-4 col-md-6 service_col">
                     <div class="service text-center"></div>
                     <div class="service"></div>
-                    <figure class="cd-image-container">
-                        <img src="images/xizmat10.jpg" width="400" height="350" alt="пластик хирургия">
+                    <div class="cd-image-container">
+                        <img src="images/xizmat10.jpg" width="370" height="350" alt="пластик хирургия">
 
                         <div class="service_title" style="text-align: center">Sangapuri</div>
-                    </figure>
+                    </div>
 
                 </div>
             </div>
@@ -539,11 +540,80 @@
         </div>
 
     </div>
-</div>
+
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <div class="mobile-bottom-nav__item-content" onclick="window.open('index.html','_self')">
+                <i class="material-icons">home</i>
+                Asosiy
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content" onclick="window.open('videoblog.html','_self')">
+                <i class="material-icons">filter</i>
+                Video blog
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('results.html','_self')">check</i>
+                Natijalar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('prices.html','_self')">payment</i>
+                Narxlar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('contact.html','_self')">phone</i>
+                Aloqa
+            </div>
+        </div>
+    </nav>
+
 </div>
 
 
 <!-- Footer -->
+<nav class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+        <div class="mobile-bottom-nav__item-content" onclick="window.open('index.html','_self')">
+            <i class="material-icons">home</i>
+            Asosiy
+        </div>
+    </div>
+    <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content" onclick="window.open('videoblog.html','_self')">
+            <i class="material-icons">filter</i>
+            Video blog
+        </div>
+    </div>
+    <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+            <i class="material-icons" onclick="window.open('results.html','_self')">check</i>
+            Natijalar
+        </div>
+    </div>
+
+    <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+            <i class="material-icons" onclick="window.open('prices.html','_self')">payment</i>
+            Narxlar
+        </div>
+    </div>
+
+    <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+            <i class="material-icons" onclick="window.open('contact.html','_self')">phone</i>
+            Aloqa
+        </div>
+    </div>
+</nav>
 
 <footer class="footer">
     <div class="footer_content">
@@ -657,9 +727,9 @@
                         <nav class="footer_nav ml-md-auto">
                             <ul class="d-flex flex-row align-items-center justify-content-start">
                                 <li><a href="index.html">Asosiy</a></li>
-                                <li><a href="about.html">Xizmatlar</a></li>
-                                <li><a href="services.html">Natijalar</a></li>
-                                <li><a href="blog.html">Narxlar</a></li>
+                                <li><a href="videoblog.html">Xizmatlar</a></li>
+                                <li><a href="results.html">Natijalar</a></li>
+                                <li><a href="prices.html">Narxlar</a></li>
                                 <li><a href="contact.html">Aloqa</a></li>
                             </ul>
                         </nav>
@@ -684,6 +754,7 @@
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="plugins/jquery-datepicker/jquery-ui.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/navbar_script.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>

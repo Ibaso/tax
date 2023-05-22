@@ -6,10 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Dr PRO template project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles/contact.css">
     <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/navbar_style.css">
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" type="text/css" href="styles/navbar_demo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 </head>
 <body>
 
@@ -33,9 +41,9 @@
             <nav class="main_nav">
                 <ul class="d-flex flex-row align-items-center justify-content-start">
                     <li><a href="index.html">Asosiy</a></li>
-                    <li><a href="about.html">Xizmatlar</a></li>
-                    <li ><a href="services.html">Natijalar</a></li>
-                    <li><a href="blog.html">Narxlar</a></li>
+                    <li><a href="videoblog.html">Xizmatlar</a></li>
+                    <li ><a href="results.html">Natijalar</a></li>
+                    <li><a href="prices.html">Narxlar</a></li>
                     <li class="active"><a href="contact.html">Aloqa</a></li>
                 </ul>
             </nav>
@@ -75,9 +83,9 @@
         <nav class="menu_nav">
             <ul>
                 <li><a href="index.html">Asosiy</a></li>
-                <li><a href="about.html">Xizmatlar</a></li>
-                <li><a href="services.html">Natijalar</a></li>
-                <li><a href="blog.html">Narxlar</a></li>
+                <li><a href="videoblog.html">Xizmatlar</a></li>
+                <li><a href="results.html">Natijalar</a></li>
+                <li><a href="prices.html">Narxlar</a></li>
                 <li><a href="contact.html">Aloqa</a></li>
             </ul>
         </nav>
@@ -198,6 +206,40 @@
         </div>
     </div>
 
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item ">
+            <div class="mobile-bottom-nav__item-content" onclick="window.open('index.html','_self')">
+                <i class="material-icons">home</i>
+                Asosiy
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content" onclick="window.open('videoblog.html','_self')">
+                <i class="material-icons">filter</i>
+                Video blog
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('results.html','_self')">check</i>
+                Natijalar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('prices.html','_self')">payment</i>
+                Narxlar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content mobile-bottom-nav__item--active">
+                <i class="material-icons" onclick="window.open('contact.html','_self')">phone</i>
+                Aloqa
+            </div>
+        </div>
+    </nav>
 
     <!-- Footer -->
 
@@ -317,9 +359,9 @@
                             <nav class="footer_nav ml-md-auto">
                                 <ul class="d-flex flex-row align-items-center justify-content-start">
                                     <li><a href="index.html">Asosiy</a></li>
-                                    <li><a href="about.html">Xizmatlar</a></li>
-                                    <li><a href="services.html">Natijalar</a></li>
-                                    <li><a href="blog.html">Narxlar</a></li>
+                                    <li><a href="videoblog.html">Xizmatlar</a></li>
+                                    <li><a href="results.html">Natijalar</a></li>
+                                    <li><a href="prices.html">Narxlar</a></li>
                                     <li><a href="contact.html">Aloqa</a></li>
                                 </ul>
                             </nav>
@@ -343,6 +385,7 @@
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact.js"></script>
+<script src="js/navbar_script.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
