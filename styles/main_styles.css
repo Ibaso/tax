@@ -651,10 +651,8 @@ section {
 
 .home_container {
     position: absolute;
-    top: 50%;
-    -webkit-transform: moz-transform:
-    ms-transform: o-transform:
-    ransform: eft: 0;
+    top: 218px;
+    left: 0;
     width: 100%;
 }
 
@@ -1369,4 +1367,54 @@ section {
 }
 .image-review{
     width:100%
+}
+
+.custom_direct_line {
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+
+.direct_line_title {
+    width: 130px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #fff;
+    background-color: #fd556d;
+    white-space: nowrap;
+}
+
+.direct_line_title:hover {
+    background: transparent;
+    border: solid 2px #fd556d;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    color: #fd556d;
+}
+
+.custom_direct_line_num {
+    cursor: pointer;
+    width: 60px;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #fff;
+    background: #57ccc3;
+    white-space: nowrap;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.custom_direct_line_num:hover {
+    background: transparent;
+    border: solid 2px #57ccc3;
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    color: #57ccc3;
 }

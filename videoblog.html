@@ -13,6 +13,12 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="styles/about.css">
     <link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar_style.css">
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" type="text/css" href="styles/navbar_demo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 </head>
 <body>
 
@@ -35,9 +41,9 @@
             <nav class="main_nav">
                 <ul class="d-flex flex-row align-items-center justify-content-start">
                     <li><a href="index.html">Asosiy</a></li>
-                    <li class="active"><a href="about.html">Videoblog</a></li>
-                    <li><a href="services.html">Natijalar</a></li>
-                    <li><a href="blog.html">Narxlar</a></li>
+                    <li class="active"><a href="videoblog.html">Videoblog</a></li>
+                    <li><a href="results.html">Natijalar</a></li>
+                    <li><a href="prices.html">Narxlar</a></li>
                     <li><a href="contact.html">Aloqa</a></li>
                 </ul>
             </nav>
@@ -56,10 +62,11 @@
                         <li><a href="https://www.instagram.com/dr_choriyev/?r=nametag"><i class="fa fa-instagram"
                                                                                           aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://www.youtube.com/channel/UC1KgQ3nypI-tVX-aiqnQqEQ"><i class="fa fa-youtube"
+                        <li><a href="https://www.facebook.com/Dr.Choriyev/"><i class="fa fa-facebook"
+                                                                               aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC1KgQ3nypI-tVX-aiqnQqEQ"><i class="fa fa-telegram"
                                                                                                   aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://t.me/Dr_Choriyev"><i class="fa fa-telegram" true></i></a></li>
                     </ul>
                 </div>
 
@@ -82,9 +89,9 @@
         <nav class="menu_nav">
             <ul>
                 <li><a href="index.html">Asosiy</a></li>
-                <li><a href="about.html">Videoblog</a></li>
-                <li><a href="services.html">Natijalar</a></li>
-                <li><a href="blog.html">Narxlar</a></li>
+                <li><a href="videoblog.html">Videoblog</a></li>
+                <li><a href="results.html">Natijalar</a></li>
+                <li><a href="prices.html">Narxlar</a></li>
                 <li><a href="contact.html">Aloqa</a></li>
             </ul>
         </nav>
@@ -366,7 +373,42 @@
         </div>
 
     </div>
-</div>
+
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item ">
+            <div class="mobile-bottom-nav__item-content" onclick="window.open('index.html','_self')">
+                <i class="material-icons">home</i>
+                Asosiy
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content mobile-bottom-nav__item--active" onclick="window.open('videoblog.html','_self')">
+                <i class="material-icons">filter</i>
+                Video blog
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('results.html','_self')">check</i>
+                Natijalar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('prices.html','_self')">payment</i>
+                Narxlar
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <i class="material-icons" onclick="window.open('contact.html','_self')">phone</i>
+                Aloqa
+            </div>
+        </div>
+    </nav>
+
 </div>
 
 <!-- Call to action -->
@@ -501,9 +543,9 @@
                         <nav class="footer_nav ml-md-auto">
                             <ul class="d-flex flex-row align-items-center justify-content-start">
                                 <li><a href="index.html">Asosiy</a></li>
-                                <li><a href="about.html">Videoblog</a></li>
-                                <li><a href="services.html">Natijalar</a></li>
-                                <li><a href="blog.html">Narxlar</a></li>
+                                <li><a href="videoblog.html">Xizmatlar</a></li>
+                                <li><a href="results.html">Natijalar</a></li>
+                                <li><a href="prices.html">Narxlar</a></li>
                                 <li><a href="contact.html">Aloqa</a></li>
                             </ul>
                         </nav>
@@ -513,7 +555,6 @@
         </div>
     </div>
 </footer>
-</div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
@@ -527,6 +568,8 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/about.js"></script>
+<script src="js/navbar_script.js"></script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
