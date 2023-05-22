@@ -34,7 +34,7 @@
                 <ul class="d-flex flex-row align-items-center justify-content-start">
                     <li><a href="index.html">Asosiy</a></li>
                     <li><a href="about.html">Xizmatlar</a></li>
-                    <li ><a href="services.html">Natijalar</a></li>
+                    <li><a href="services.html">Natijalar</a></li>
                     <li><a href="blog.html">Narxlar</a></li>
                     <li class="active"><a href="contact.html">Aloqa</a></li>
                 </ul>
@@ -45,14 +45,22 @@
                 <div class="header_phone">+998 91 448 75 77</div>
 
                 <!-- Appointment Button -->
-                <div class="button button_1 header_button"><a href="https://www.instagram.com/dr_choriyev/?r=nametag">Aloqa</a></div>
+                <div class="button button_1 header_button"><a href="https://www.instagram.com/dr_choriyev/?r=nametag">Aloqa</a>
+                </div>
 
                 <!-- Header Social -->
                 <div class="social header_social">
                     <ul class="d-flex flex-row align-items-center justify-content-start">
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+                        <ul class="d-flex flex-row align-items-center justify-content-start">
+                            <li><a href="https://www.instagram.com/dr_choriyev/?r=nametag"><i class="fa fa-instagram"
+                                                                                              aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="https://www.youtube.com/channel/UC1KgQ3nypI-tVX-aiqnQqEQ"><i
+                                    class="fa fa-youtube"
+                                    aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="https://t.me/Dr_Choriyev"><i class="fa fa-telegram" true></i></a></li>
+                        </ul>
                     </ul>
                 </div>
 
@@ -129,15 +137,56 @@
                 <div class="col-lg-6">
                     <div class="contact_form_container">
                         <div class="contact_form_title" style="width: 100%;">Online murojaat yuborish</div>
-                        <form action="#" class="contact_form" id="contact_form">
+                        <form class="contact_form" id="contact_form">
                             <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-                                <input type="text" class="contact_input" placeholder="Ismingiz" required="required">
-                                <input type="tel" class="contact_input" placeholder="Telefon" required="required">
+                                <input id="fname" name="fname" type="text" class="contact_input"
+                                       placeholder="Ismingiz" required="required">
+                                <input id="phone" name="phone" type="tel" class="contact_input"
+                                       placeholder="Telefon" required="required">
+                                <p id="rule"></p>
                             </div>
-                            <button class="button button_1 contact_button trans_200">Jo'natish</button>
+                            <button type="button" id="myBtn" class="button button_1 contact_button trans_200" onclick="sendMessage()">
+                                Jo'natish
+                            </button>
                         </form>
                     </div>
                 </div>
+                <script>
+                    var token = '5980656307:AAF8A-warEqhFy4EwSkeAc3nfzl7FYQ20Ao';
+                    var chat_id = '-844459386';
+
+                    function sendMessage(text) {
+
+                        var name = document.getElementById('fname').value
+                        var phone = document.getElementById('phone').value
+
+                        if (name.length<3 || phone.length<9 ){
+                            document.getElementById("rule").innerHTML = "Iltimos ma'lumotlarni to'liq kiriting";
+                        }
+                        else {
+                            var message ='name : ' +  name + "; \n  " +  "phone : " + phone
+
+                            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`; // The url to request
+                            const xht = new XMLHttpRequest();
+                            xht.addEventListener("readystatechange", () => {
+                                if (xht.readyState === 4 && xht.status === 200) {
+                                    document.getElementById("rule").innerHTML = "Ma'lumotlar yuborildi <br> Siz bilan tez orada bog'lanishadi";
+                                    document.getElementById('fname').value = ""
+                                    document.getElementById('phone').value = ""
+                                } else if (xht.readyState === 4) {
+                                    document.getElementById("rule").innerHTML = "Ma'lumotlarni yuborishda xatolik yuz berdi";
+
+                                }
+                            });
+                            xht.open("GET", url);
+                            xht.send();
+
+
+                        }
+
+
+                    }
+                </script>
 
                 <!-- Contact Content -->
                 <div class="col-lg-5 offset-lg-1 contact_col">
@@ -175,10 +224,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style=" width: 100%;margin-top: 15px;margin-left: 1px" >
+            <div class="row" style=" width: 100%;margin-top: 15px;margin-left: 1px">
                 <!-- Yandex Map -->
-                <div class="map" >
-                    <div  >
+                <div class="map">
+                    <div>
                         <div class=" ">
                             <div class=" "><a
                                     href="https://yandex.com/maps/org/dr_choriyev/10546754041/?utm_medium=mapframe&utm_source=maps"
