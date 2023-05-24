@@ -42,7 +42,7 @@
                 <ul class="d-flex flex-row align-items-center justify-content-start">
                     <li><a href="index.html">Asosiy</a></li>
                     <li><a href="videoblog.html">Videoblog</a></li>
-                    <li ><a href="results.html">Natijalar</a></li>
+                    <li><a href="results.html">Natijalar</a></li>
                     <li><a href="prices.html">Narxlar</a></li>
                     <li class="active"><a href="contact.html">Aloqa</a></li>
                 </ul>
@@ -53,7 +53,8 @@
                 <div class="header_phone">+998 91 448 75 77</div>
 
                 <!-- Appointment Button -->
-                <div class="button button_1 header_button"><a href="https://www.instagram.com/dr_choriyev/?r=nametag">Aloqa</a></div>
+                <div class="button button_1 header_button"><a href="https://www.instagram.com/dr_choriyev/?r=nametag">Aloqa</a>
+                </div>
 
                 <!-- Header Social -->
                 <div class="social header_social">
@@ -148,11 +149,12 @@
                             <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
                                 <input id="fname" name="fname" type="text" class="contact_input"
                                        placeholder="Ismingiz" required="required">
-                                <input id="phone" name="phone" type="tel" class="contact_input"
+                                <input id="phone" name="phone" type="number" min="0" class="contact_input phone"
                                        placeholder="Telefon" required="required">
                                 <p id="rule"></p>
                             </div>
-                            <button type="button" id="myBtn" class="button button_1 contact_button trans_200" onclick="sendMessage()">
+                            <button type="button" id="myBtn" class="button button_1 contact_button trans_200"
+                                    onclick="sendMessage()">
                                 Jo'natish
                             </button>
                         </form>
@@ -162,31 +164,44 @@
                     var token = '5980656307:AAF8A-warEqhFy4EwSkeAc3nfzl7FYQ20Ao';
                     var chat_id = '-844459386';
 
-                    function sendMessage(text) {
+                    function sendMessage() {
 
-                        var name = document.getElementById('fname').value
-                        var phone = document.getElementById('phone').value
+                        let name = document.getElementById('fname').value
+                        let phone = document.getElementById('phone').value
+                        let message;
 
-                        if (name.length<3 || phone.length<9 ){
+                        if (name.length < 3 || phone.length < 9) {
                             document.getElementById("rule").innerHTML = "Iltimos ma'lumotlarni to'liq kiriting";
-                        }
-                        else {
-                            var message ='name : ' +  name + "; \n  " +  "phone : " + phone
+                        } else {
+                            fetch('https://ipapi.co/json/')
+                                .then(d => d.json())
+                                .then(d =>{
+                                    message =
+                                        "👤: " + name + "  %0A" +
+                                        "📞: " + phone + " %0A" +
+                                        "🕔: " + new Date().toLocaleString() + " %0A" +
+                                        "📍: " + d.ip + "  %0A" +
+                                        "🏙: " + d.region + " / " + d.country_name
+                                    console.log(message)
+                                    console.log(d)
+                                    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`; // The url to request
+                                    const xht = new XMLHttpRequest();
+                                    xht.addEventListener("readystatechange", () => {
+                                        if (xht.readyState === 4 && xht.status === 200) {
+                                            document.getElementById("rule").innerHTML = "Ma'lumotlar yuborildi <br> Siz bilan tez orada bog'lanishadi";
+                                            document.getElementById('fname').value = ""
+                                            document.getElementById('phone').value = ""
+                                        } else if (xht.readyState === 4) {
+                                            document.getElementById("rule").innerHTML = "Ma'lumotlarni yuborishda xatolik yuz berdi";
 
-                            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`; // The url to request
-                            const xht = new XMLHttpRequest();
-                            xht.addEventListener("readystatechange", () => {
-                                if (xht.readyState === 4 && xht.status === 200) {
-                                    document.getElementById("rule").innerHTML = "Ma'lumotlar yuborildi <br> Siz bilan tez orada bog'lanishadi";
-                                    document.getElementById('fname').value = ""
-                                    document.getElementById('phone').value = ""
-                                } else if (xht.readyState === 4) {
-                                    document.getElementById("rule").innerHTML = "Ma'lumotlarni yuborishda xatolik yuz berdi";
+                                        }
+                                    });
+                                    xht.open("GET", url);
+                                    xht.send();
+                                });
 
-                                }
-                            });
-                            xht.open("GET", url);
-                            xht.send();
+
+
 
 
                         }
@@ -231,7 +246,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style=" width: 100%;margin-top: 15px;margin-left: 1px" >
+            <div class="row" style=" width: 100%;margin-top: 15px;margin-left: 1px">
                 <!-- Yandex Map -->
                 <div class="map">
                     <div>
@@ -301,9 +316,9 @@
                         <div class="footer_about">
                             <div class="footer_logo">
                                 <a href="index.html">
-                    <div>Dr<span>CHORIYEV</span></div>
-                    <div>Plastic Surgery</div>
-                </a>
+                                    <div>Dr<span>CHORIYEV</span></div>
+                                    <div>Plastic Surgery</div>
+                                </a>
                             </div>
                             <div class="footer_about_text">
                                 <p>Go'zallik dunyoni qutqaradi. </p>

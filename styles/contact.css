@@ -1157,4 +1157,14 @@ section {
 .footer_nav ul li a:hover {
     color: #57ccc3;
 }
+/* Chrome, Safari, Edge, Opera */
+.phone::-webkit-outer-spin-button,
+.phone::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+/* Firefox */
+.phone[type=number] {
+    -moz-appearance: textfield;
+}
